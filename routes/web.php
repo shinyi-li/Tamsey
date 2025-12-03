@@ -32,10 +32,9 @@ Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-// === Your custom Livewire Profile Page ===
+// === Profile Routes ===
 Route::middleware(['auth'])->group(function () {
-    Route::view('/profile-update', 'profile')   // or 'profile.edit' — whichever matches your actual path
-        ->name('profile.update');
+    Route::view('profile', 'profile')->name('profile');
 });
 
 // (Optional) Add your custom dashboard later:
